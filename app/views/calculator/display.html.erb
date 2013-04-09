@@ -1,0 +1,6 @@
+<h1>Calculator</h1>
+
+<%= form_tag '/calculator/display',  method: 'get' do %>
+  <%= text_field_tag(:expression, @value) %>
+  <%= submit_tag("Calculate") %>
+<% end %>
