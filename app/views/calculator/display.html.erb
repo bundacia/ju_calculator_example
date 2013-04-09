@@ -1,6 +1,8 @@
 <h1>Calculator</h1>
 
+<% value = eval(params[:expression]) if params[:expression] %>
+
 <%= form_tag '/calculator/display',  method: 'get' do %>
-  <%= text_field_tag(:expression, @value) %>
+  <%= text_field_tag(:expression, value) %>
   <%= submit_tag("Calculate") %>
 <% end %>
